@@ -15,6 +15,7 @@
 
 <script setup>
 import {reactive} from "vue"
+import axios, { Axios } from "axios";
 
 const formData = reactive({
     titulo: "",
@@ -25,6 +26,24 @@ const formData = reactive({
 function guardar() {
 let isError = false
 let isLoading= true
+
+try {
+     axios.post("http://localhost:3000/tareas" , {
+        titulo: formData.titulo,
+        description: formData.description,
+        quien: formData.quien
+
+     })
+     
+   
+    
+} 
+catch (error) {
+     isError = true
+    
+}
+
+
 
 }
 
