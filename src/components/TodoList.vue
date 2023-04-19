@@ -4,9 +4,6 @@
         <h4>{{ info.titulo }}</h4>
         <p>{{ info.quien }}</p>
         <p>{{ info.description }}</p>
-
-
-
     </div>
   
 </template>
@@ -14,7 +11,7 @@
 <script setup>
 import { defineProps } from 'vue';
 defineProps({
-    data:Object
+    data:Object,
 })
 </script>
 

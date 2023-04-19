@@ -23,4 +23,5 @@
     data.value = await info.conseguirInfo()
   }))
 
+
 </script>

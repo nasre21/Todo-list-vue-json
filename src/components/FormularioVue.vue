@@ -1,7 +1,37 @@
 <template>
-    <h1>ll</h1>
+    <img v-if="isError" src="@/assets/logo.png" alt="">
+    <img v-if="isLoading" src="@/assets/logo.png" alt="">
+<div v-if="!isLoading && !isError">
+   <form class="formulario" @submit.prevent>
+    <input type="text" placeholder="Intruduce your name" v-model="formData.quien">
+    <input type="text" placeholder="Intruduce your Title" v-model="formData.titulo">
+    <div>
+    <textarea name="" id="" cols="30" rows="10" v-model="formData.description"></textarea>
+    </div>
+    <button @click="guardar">Send</button>
+   </form>
+</div>
 </template>
 
 <script setup>
+import {reactive} from "vue"
+
+const formData = reactive({
+    titulo: "",
+    description: "",
+    quien: "",
+})
+
+function guardar() {
+let isError = false
+let isLoading= true
+
+}
+
+
 
 </script>
+
+<style scoped>
+
+</style>
