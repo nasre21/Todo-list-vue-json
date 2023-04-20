@@ -32,8 +32,9 @@ try {
         titulo: formData.titulo,
         description: formData.description,
         quien: formData.quien
-
      })
+    
+    location.reload()
      
    
     
