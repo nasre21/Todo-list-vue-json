@@ -15,7 +15,7 @@
 
 <script setup>
 import {reactive} from "vue"
-import axios, { Axios } from "axios";
+import axios from "axios";
 
 const formData = reactive({
     titulo: "",
