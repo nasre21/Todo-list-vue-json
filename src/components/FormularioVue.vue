@@ -8,8 +8,11 @@
     <div>
     <textarea name="" id="" cols="30" rows="10" v-model="formData.description"></textarea>
     </div>
-    <button @click="guardar">Send</button>
+   
    </form>
+   <div>
+    <button @click="guardar">Send</button>
+   </div>
 </div>
 </template>
 
@@ -43,8 +46,9 @@ catch (error) {
      isError = true
     
 }
+isLoading= false
 
-
+return {isError, isLoading}
 
 }
 

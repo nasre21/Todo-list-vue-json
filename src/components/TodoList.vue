@@ -11,14 +11,17 @@
     </div>
     <div v-show="mostrarEdit">
             <h2>Editar todolist</h2> 
+          
             <form class="formulario" @submit.prevent>
                 <input type="text" placeholder="Intruduce your Title" v-model="formData">
                 <div>
                 <textarea name="" cols="30" rows="10" v-model="formTexto"></textarea>
                 </div>
-                <button @click="send">Enter</button>
+                
              </form>
-            
+            <div>
+                <button @click="send">Enter</button>
+            </div>
         
         </div>
 
@@ -42,6 +45,7 @@ let quienTarea = ref("")
 
 let formData = ref("")
 let formTexto = ref("")
+let isError = false
 
 
 // editar
@@ -61,7 +65,12 @@ function send(){
         location.reload()
     }
     catch(error){
+        isError = true
+
      console.log(error) 
+    }
+    return{
+        isError
     }
 } 
 
