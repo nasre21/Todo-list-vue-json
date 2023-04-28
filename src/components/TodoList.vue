@@ -34,8 +34,8 @@ defineProps({
     data:Object,
 })
 
-function buttonDelete(id){
-        axios.delete(`http://localhost:3000/tareas/${id}`)
+async function buttonDelete(id){
+      await  axios.delete(`https://nasser.onrender.com/tareas/${id}`)
         location.reload()  
 }
 
@@ -55,9 +55,9 @@ function buttonEditar(id, quien){
   mostrarEdit.value = true
 }
 
-function send(){
+async function send(){
     try{
-        axios.put(`http://localhost:3000/tareas/${idTarea.value}`,{
+       await axios.put(`https://nasser.onrender.com/tareas/${idTarea.value}`,{
             titulo:formData.value,
             description:formTexto.value,
             quien: quienTarea.value

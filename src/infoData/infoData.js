@@ -8,7 +8,7 @@ async function conseguirInfo (){
     const datos = ref(null)
 
     try{
-        let response = await axios.get("http://localhost:3000/tareas")
+        let response = await axios.get("https://nasser.onrender.com/tareas")
         datos.value = response.data
     }
     catch(error){

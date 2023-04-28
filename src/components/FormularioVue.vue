@@ -26,12 +26,12 @@ const formData = reactive({
     quien: "",
 })
 
-function guardar() {
+async function guardar() {
 let isError = false
 let isLoading= true
 
 try {
-     axios.post("http://localhost:3000/tareas" , {
+   await axios.post("https://nasser.onrender.com/tareas" , {
         titulo: formData.titulo,
         description: formData.description,
         quien: formData.quien
